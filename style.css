@@ -259,6 +259,9 @@ body{
     transition: transform 0.3s ease-in-out;
 }
 
+
+/* loader */
+
 .loader{
     background-color: white;
     width: 100%;
@@ -267,7 +270,7 @@ body{
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 3;
+    z-index: 5;
 
     animation: loader 2s linear forwards;
 }
@@ -325,13 +328,60 @@ body{
 
 }
 
+/* modal */
+
 .hidden{
-    display: none;
-    
+    animation-name: hidden;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
 }
 
+@keyframes hidden {
+    0%{
+        opacity: 1;
+        visibility: visible;
+        
+    }
+    50%{
+        
+        visibility: visible;
+        
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+}
+
+
 .visible{
-    display: grid;
+    
+
+    animation-name: visible;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes visible {
+    0%{
+        opacity: 0;
+        visibility: visible;
+        
+    }
+    50%{
+        opacity: 0.5;
+        visibility: visible;
+        
+    }
+    100%{
+        
+        opacity: 1;
+        
+    }
 }
 
 .modal{
@@ -341,7 +391,7 @@ body{
     position: absolute;
     z-index: 4;
 
-    
+    display: grid;
     place-items: center;
 }
 
@@ -442,4 +492,10 @@ body{
     align-items: center;
     border-radius: 3px;
     cursor: pointer;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.91);
+
+}
+
+.modal__button:hover{
+    font-weight: 700;
 }
