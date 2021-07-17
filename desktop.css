@@ -75,6 +75,7 @@
     
 }
 
+
 @keyframes item-nav {
     0%{
         transform: translateY(0px);
@@ -89,6 +90,12 @@
         transform: translateY(0px);
         opacity: 1;
     }
+}
+
+/* Navbar Mobile */
+
+.navbar-mobile{
+    display: none;
 }
 
 

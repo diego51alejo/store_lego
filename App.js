@@ -1,5 +1,8 @@
 const modal = document.querySelector('.modal')
 
+const closeMenu = document.querySelector('#close-menu-mobile')
+const Menu_Mobile = document.querySelector('.navbar-mobile')
+const Icon_Menu_Mobile = document.querySelector('.buguer-icon') 
 
 const button1 = document.querySelector('#button1')
 const button2 = document.querySelector('#button2')
@@ -20,6 +23,14 @@ const CloseModal = (elemento, classToAdd, classToRemove) => {
 }
 
 
+
+closeMenu.addEventListener('click', () => {
+    CloseModal(Menu_Mobile, 'hidden-mobile', 'visible-mobile')
+})
+
+Icon_Menu_Mobile.addEventListener('click', () => {
+    ShowModal(Menu_Mobile, 'hidden-mobile', 'visible-mobile')
+})
 
 closeSpider.addEventListener('click', () => {
     CloseModal(modal, 'hidden', 'visible')
