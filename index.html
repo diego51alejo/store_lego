@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store Lego</title>
     <link rel="shortcut icon" href="https://i.ibb.co/MMmDPXN/lego.png">
+
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./desktop.css" media="screen and (min-width: 1200px)">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap" rel="stylesheet">
@@ -17,8 +20,11 @@
         <section class="container">
             <nav class="navbar">
                 <div class="navbar__content">
+                    <div class="navbar__phone">
+                        <img class="buguer-icon" src="./Burguer-Icon.png" alt="">
+                    </div>
                     <img src="https://i.ibb.co/MMmDPXN/lego.png" alt="Logo lego">
-                    <ul>
+                    <ul class="navbar__list__items">
                         <li><a href="/">EXCLUSIVE</a></li>
                         <li><a href="/">NEW</a></li>
                         <li><a href="/">GIFT STORE</a></li>
@@ -31,7 +37,7 @@
             <section class="main-content">
                 <p>Design yor</p>
                 <h1>Super Hero!</h1>
-                <p>¡Meet the New LEGO® SuperHero! The LEGO Group has teamed up with adidas to introduce a dynamic line of kids clothes and footwear. Designed to inspire creativity and celebrate play, these fun and colourful sweatshirts, t-shirts, jackets, trousers, hats, backpacks and sneakers blend adidas style with LEGO imagination.
+                <p>¡Meet the New LEGO® SuperHero! The LEGO Group has teamed up with adidas to introduce a dynamic line of kids clothes.
                     </p>
             </section>
 
@@ -66,7 +72,7 @@
         <!-- Modal -->
         <section class="modal hidden">
             <div class="modal__content">
-                <img class="modal__content--close" src="https://img.icons8.com/windows/50/000000/macos-close.png"/>
+                <img class="modal__content--close" id="modal__content--close-spider" src="https://img.icons8.com/windows/50/000000/macos-close.png"/>
 
                 <div class='modal__content--slider'>
                     <input type="radio" name="slider-1" id="radio-1" checked>
@@ -93,6 +99,8 @@
             
             
         </section>
+
+
     </div>
 
 
