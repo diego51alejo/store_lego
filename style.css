@@ -6,19 +6,16 @@
 }
 
 body{
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
     font-family: 'Lato', sans-serif;
 }
 
-.banner{
-    height: 100vh;
-}
 
 .page{
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -227,7 +224,7 @@ body{
 .hidden-mobile{
     
     animation-name: hidden-mobile;
-    animation-duration: 0.3s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -237,11 +234,12 @@ body{
         transform: translateX(0px);
         
     }
+    70%{
+        transform: translateX(-900px);  
+    }
     100%{
-        
-        transform: translateX(-500px);
-        
-        
+        transform: translateX(-900px);
+        visibility: hidden;
     }
 }
 
