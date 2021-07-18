@@ -12,6 +12,7 @@ const button3 = document.querySelector('#button3')
 const closeSpider = document.querySelector('#modal__content--close-spider')
 
 
+
 const ShowModal = (elemento, classToRemove, classToAdd) => {
     elemento.classList.remove(classToRemove)
     elemento.classList.add(classToAdd)
@@ -52,14 +53,13 @@ button3.addEventListener('click', () => {
     modal.classList.add('visible')
 })
 
-// closeButton.addEventListener('click', () => {
-//     CloseModal(modal, 'hidden', 'visible')
-//     CloseModal(modal_2, 'hidden', 'visible')
-// })
 
-// closeButton.forEach((closeButton, index) => {
-//     closeButton.addEventListener('click', CloseModal(index, 'hidden', 'visible'))
-// })
+let height = window.outerHeight
+
+let height_container = document.querySelector('.container')
+height_container.setAttribute('style', `height: ${height}px`)
+
+
 
 
 
