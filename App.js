@@ -54,10 +54,10 @@ button3.addEventListener('click', () => {
 })
 
 
-let height = window.outerHeight
+// let height = window.outerHeight
 
-let height_container = document.querySelector('body')
-height_container.setAttribute('style', `height: ${height}px`)
+// let height_container = document.querySelector('body')
+// height_container.setAttribute('style', `height: ${height}px`)
 
 
 
