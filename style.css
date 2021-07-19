@@ -16,7 +16,6 @@ body{
     
 }
 
-
 .page{
     position: relative;
     
@@ -231,7 +230,7 @@ body{
 .hidden-mobile{
     
     animation-name: hidden-mobile;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }

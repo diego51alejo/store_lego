@@ -1,4 +1,5 @@
 const modal = document.querySelector('.modal')
+const container = document.querySelector('.container')
 
 const closeMenu = document.querySelector('#close-menu-mobile')
 const Menu_Mobile = document.querySelector('.navbar-mobile')
@@ -54,10 +55,6 @@ button3.addEventListener('click', () => {
 })
 
 
-// let height = window.outerHeight
-
-// let height_container = document.querySelector('body')
-// height_container.setAttribute('style', `height: ${height}px`)
 
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -71,6 +68,72 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
+
+
+
+  let isDragging = false,
+    startPos = 0,
+    currentTranslate = 0,
+    prevTranslate = 0,
+    animationId = 0,
+    currentIndex = 0
+
+  
+
+  //Touch Events Container
+  container.addEventListener('touchstart', touchStart)
+  container.addEventListener('touchend', touchEnd)
+  container.addEventListener('touchmove', touchMove)
+
+  //Touch Events Menu-Mobile
+  Menu_Mobile.addEventListener('touchstart', touchStart)
+  Menu_Mobile.addEventListener('touchend', touchEnd)
+  Menu_Mobile.addEventListener('touchmove', touchMove)
+
+
+  function touchStart(event) {
+        
+        isDragging = true
+        startPos = getPositionX(event)
+        
+}
+
+function touchEnd() {
+    
+    isDragging = false
+    
+
+    const moveBy = currentTranslate - prevTranslate
+
+    if (moveBy > 70)
+        ShowModal(Menu_Mobile, 'hidden-mobile', 'visible-mobile')
+
+    if (moveBy < 70)
+        CloseModal(Menu_Mobile, 'hidden-mobile', 'visible-mobile')
+
+}
+
+function touchMove(event) {
+   
+    if (isDragging) {
+        const currentPosition = getPositionX(event)
+        currentTranslate = prevTranslate + currentPosition - startPos
+    }
+    
+}
+
+function getPositionX(event){
+    return event.type.includes('mouse') 
+    ? event.pageX 
+    : event.touches[0].clientX
+}
+
+
+
+
+
+
+
 
 
 
